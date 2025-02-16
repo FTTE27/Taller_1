@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <div class="formulario">
+        <div class="container">
+            <h2>Formulario</h2>
+            <p>Por favor, completa el siguiente formulario:</p>
+            <form id="formularioForm" method="post" novalidate>
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio, máximo 100 caracteres.</div>
+                    <p id="nombresCount">0/100</p>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio, máximo 100 caracteres.</div>
+                    <p id="apellidosCount">0/100</p>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de Documento:</label>
+                    <input type="text" id="tipo" name="tipo" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio.</div>
+                    <p id="tipoCount">0/100</p>
+                </div>
+                <div class="form-group">
+                    <label for="idDoc">Numero de Documento:</label>
+                    <input type="text" id="idDoc" name="idDoc" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio.</div>
+                    <p id="idDocCount">0/100</p>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de nacimiento(XX/XX/XXXX):</label>
+                    <input type="text" id="fecha" name="fecha" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio.</div>
+                    <p id="fechaCount">0/100</p>
+                </div>
+                <div class="form-group">
+                    <label for="numero">Numero de teléfono (Agrega código de país):</label>
+                    <input type="text" id="numero" name="numero" maxlength="100" required>
+                    <div class="invalid-feedback">Campo obligatorio.</div>
+                    <p id="numeroCount">0/100</p>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+                <div id="formErrors" class="form-errors"></div>
+            </form>
+        </div>
+    </div>  
+    <script src="/js/form.js"></script>
+</body>
+</html>
