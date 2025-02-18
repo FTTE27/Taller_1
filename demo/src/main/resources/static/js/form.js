@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("formularioForm");
+    const form = document.getElementById("registroForm");
     const nombresInput = document.getElementById("nombres");
     const apellidosInput = document.getElementById("apellidos");
     const tipoInput = document.getElementById("tipo");
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             input.nextElementSibling.style.display = "block";
         }
     };
-
+/*
     nombresInput.addEventListener("input", () => {
         updateCount(nombresInput, nombresCount, 100);
         validateInput(nombresInput, nombresInput.value.length > 0 && nombresInput.value.length <= 100);
@@ -59,23 +59,23 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCount(numeroInput, numeroCount, 100);
         validateInput(numeroInput, numeroInput.value.length > 0 && numeroInput.value.length <= 100);
     });
-
+*/
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
         let formIsValid = true;
-
+/*
         formIsValid = formIsValid && nombresInput.value.length > 0 && nombresInput.value.length <= 100;
         formIsValid = formIsValid && apellidosInput.value.length > 0 && apellidosInput.value.length <= 100;
         formIsValid = formIsValid && tipoCount.value.length > 0 && tipoCount.value.length <= 100;
         formIsValid = formIsValid && idDocCount.value.length > 0 && idDocCount.value.length <= 100;
         formIsValid = formIsValid && fechaCount.value.length > 0 && fechaCount.value.length <= 100;
-
+*/
         if (formIsValid) {
             const formData = {
-                nombres: nombresInput.value,
+                nombre: nombresInput.value,
                 apellidos: apellidosInput.value,
                 tipo: tipoInput.value,
-                id: idDocInput.value,
+                idDoc: idDocInput.value,
                 fecha: fechaInput.value,
                 numero: numeroInput.value
             };
@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (response.ok) {
                     alert("Formulario enviado correctamente");
                     form.reset();
-                    nombresCount.textContent = "0/100";
+                   /* nombresCount.textContent = "0/100";
                     apellidosCount.textContent = "0/100";
                     tipoInput.textContent = "0/100";
                     idDocInput.textContent = "0/100";
                     fechaInput.textContent = "0/100";
-                    numeroInput.textContent = "0/100";
+                    numeroInput.textContent = "0/100";*/
                     formErrors.style.display = "none";
                 } else {
                     throw new Error('Error en el envío del formulario');
